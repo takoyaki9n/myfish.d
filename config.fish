@@ -1,7 +1,7 @@
-set SCRIPT_DIR (dirname (status --current-filename))
+set FISH_CONFIG_DIR (dirname (status --current-filename))
 
 # source my config
-source $SCRIPT_DIR/myfish.d/myconfig.fish
+source $FISH_CONFIG_DIR/myfish.d/myconfig.fish
 
 # Local settings
 ## envs
