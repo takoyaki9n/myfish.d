@@ -3,7 +3,7 @@ set MYCONFIG_DIR (dirname (status --current-filename))
 # Set path to my functions
 set -x fish_function_path $fish_function_path $MYCONFIG_DIR/functions
 
-fzf
+# fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
 
 # OS specific settings
