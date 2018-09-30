@@ -6,6 +6,9 @@ set -x fish_function_path $fish_function_path $MYCONFIG_DIR/functions
 # fzf
 set -U FZF_LEGACY_KEYBINDINGS 0
 
+# aliases
+alias pping='prettyping --nolegend'
+
 # OS specific settings
 switch (uname)
 case Linux # Linux
