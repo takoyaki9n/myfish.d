@@ -1,12 +1,10 @@
-set FISH_CONFIG_DIR (dirname (status --current-filename))
-
 # source my config
-source $FISH_CONFIG_DIR/myfish.d/myconfig.fish
+source $__fish_config_dir/myfish.d/myconfig.fish
 
 # Local settings
 ## envs
 ### cargo
-# if test -s ~/.cargo/env
+# if [ -s "$HOME/.cargo/env" ]
 #     source $HOME/.cargo/env
 # end
 ### pyenv
