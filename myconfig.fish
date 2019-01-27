@@ -4,7 +4,9 @@ set -l MYCONFIG_DIR (dirname (status filename))
 set -p fish_function_path $MYCONFIG_DIR/functions
 
 # fzf
-set -U FZF_LEGACY_KEYBINDINGS 0
+if type -q fzf
+    set -U FZF_LEGACY_KEYBINDINGS 0
+end
 
 # OS specific settings
 switch (uname)
