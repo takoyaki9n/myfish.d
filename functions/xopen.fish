@@ -1,5 +1,5 @@
 function xopen -d 'Open file'
-    set -l xopen (which open)
+    set -l xopen
     switch (uname)
         case Linux
             set xopen 'xdg-open'
