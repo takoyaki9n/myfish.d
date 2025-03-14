@@ -8,13 +8,13 @@ if type -q fzf
     set -U FZF_LEGACY_KEYBINDINGS 0
 end
 
-# pbcopy & pbpaste (Linux only)
-if type -q xclip
-    function pbcopy
-        xclip -selection clipboard
-    end
-
-    function pbpaste
-        xclip -selection clipboard -o
-    end
+# Aliases for pbcopy & pbpaste
+if set -q WSL_DISTRO_NAME
+    # WSL
+    alias pbcopy='powershell.exe -command "[Console]::InputEncoding = [System.Text.Encoding]::UTF8; Set-Clipboard -Value ([Console]::In.ReadToEnd())"'
+    alias pbpaste='powershell.exe -command "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; Get-Clipboard"'
+else if type -q xclip
+    # Native Ubuntu (when xclip is installed)
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
 end
